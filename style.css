@@ -1,4 +1,4 @@
-/*RESET & VARIABLE GLOBAL NASA TECH*/
+/*RESET & VARIABLE GLOBAL PERSONA 3 STYLE*/
 * {
     box-sizing: border-box;
     margin: 0;
@@ -6,18 +6,19 @@
 }
 
 :root {
-    --nasa-blue: #0b3d91;
-    --nasa-red: #fc3d21;
-    --nasa-dark: #0b0d17;
-    --nasa-card-bg: #15192b;
-    --nasa-text: #f1f5f9;
-    --nasa-muted: #94a3b8;
-    --nasa-border: #2a324d;
+    --p3-blue: #0055A5;        /* Biru Persona 3 */
+    --p3-cyan: #00A8E8;        /* Cyan Highlight & Aksens */
+    --p3-dark: #0A0E17;        /* Midnight Dark Background */
+    --p3-card-bg: #121A2D;     /* Background Kartu Navy Gelap */
+    --p3-text: #FFFFFF;        /* Teks Utama Putih Clean */
+    --p3-muted: #8A99AD;       /* Teks Deskripsi Muted */
+    --p3-border: #00A8E8;      /* Border Accent Cyan */
+    --p3-nav-bg: rgba(10, 14, 23, 0.95); /* Semi-transparan Nav */
 }
 
 body.nasa-theme {
-    background-color: var(--nasa-dark);
-    color: var(--nasa-text);
+    background-color: var(--p3-dark);
+    color: var(--p3-text);
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
     min-height: 100vh;
@@ -29,8 +30,8 @@ body.nasa-theme {
     justify-content: space-between;
     align-items: center;
     padding: 20px 40px;
-    background-color: rgba(11, 13, 23, 0.95);
-    border-bottom: 1px solid var(--nasa-border);
+    background-color: var(--p3-nav-bg);
+    border-bottom: 2px solid var(--p3-cyan);
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -52,19 +53,19 @@ body.nasa-theme {
     height: 38px;
     border-radius: 50%;
     object-fit: cover;
-    border: 2px solid var(--nasa-red); 
-    box-shadow: 0 0 10px rgba(252, 61, 33, 0.4); 
+    border: 2px solid var(--p3-cyan); 
+    box-shadow: 0 0 10px rgba(0, 168, 232, 0.6); 
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .nasa-nav .logo:hover .nav-avatar {
     transform: scale(1.1);
     border-color: #ffffff;
-    box-shadow: 0 0 15px rgba(11, 61, 145, 0.8);
+    box-shadow: 0 0 15px var(--p3-cyan);
 }
 
 .nasa-nav .logo span {
-    color: var(--nasa-red);
+    color: var(--p3-cyan);
     font-size: 0.85rem;
 }
 
@@ -75,7 +76,7 @@ body.nasa-theme {
 }
 
 .nasa-nav a {
-    color: var(--nasa-muted);
+    color: var(--p3-muted);
     text-decoration: none;
     font-weight: 600;
     font-size: 0.9rem;
@@ -88,22 +89,22 @@ body.nasa-theme {
 }
 
 .nasa-nav a.active {
-    border-bottom: 2px solid var(--nasa-red);
-    padding-bottom: 4px;
+    border-bottom: 2px solid var(--p3-cyan);
+    padding-bottom: 2px;
 }
 
 /*BANNER (UNTUK INDEX)*/
 .hero-nasa {
-    background: linear-gradient(rgba(11, 13, 23, 0.85), rgba(11, 13, 23, 0.98)), 
-                url('../fotofoto/bacgraundIndex.jpg') center/cover no-repeat;
+    background: linear-gradient(rgba(10, 14, 23, 0.85), rgba(10, 14, 23, 0.98)), 
+                url('../fotofoto/backraundpersona.jpg') center/cover no-repeat;
     padding: 100px 20px;
     text-align: center;
-    border-bottom: 3px solid var(--nasa-red);
+    border-bottom: 3px solid var(--p3-cyan);
 }
 
 .badge-mission {
     display: inline-block;
-    background-color: var(--nasa-blue);
+    background-color: var(--p3-blue);
     color: #fff;
     padding: 6px 16px;
     border-radius: 20px;
@@ -123,15 +124,15 @@ body.nasa-theme {
 }
 
 .hero-nasa p {
-    color: var(--nasa-muted);
+    color: var(--p3-muted);
     max-width: 600px;
     margin: 0 auto 30px auto;
 }
 
 .btn-nasa {
     display: inline-block;
-    background-color: var(--nasa-red);
-    color: #fff;
+    background-color: var(--p3-cyan);
+    color: var(--p3-dark);
     padding: 12px 30px;
     text-decoration: none;
     font-weight: bold;
@@ -142,8 +143,9 @@ body.nasa-theme {
 }
 
 .btn-nasa:hover {
-    background-color: #d92b13;
-    box-shadow: 0 0 20px rgba(252, 61, 33, 0.6);
+    background-color: #ffffff;
+    color: var(--p3-blue);
+    box-shadow: 0 0 20px rgba(0, 168, 232, 0.8);
 }
 
 /*CONTAINER & HEADER HALAMAN*/
@@ -167,7 +169,7 @@ body.nasa-theme {
 }
 
 .nasa-header p {
-    color: var(--nasa-muted);
+    color: var(--p3-muted);
     max-width: 600px;
     margin: 0 auto;
 }
@@ -175,8 +177,8 @@ body.nasa-theme {
 .nasa-section-title {
     font-size: 1.25rem;
     letter-spacing: 2px;
-    color: var(--nasa-red);
-    border-bottom: 1px solid var(--nasa-border);
+    color: var(--p3-cyan);
+    border-bottom: 1px solid var(--p3-blue);
     padding-bottom: 10px;
     margin-bottom: 30px;
 }
@@ -189,8 +191,8 @@ body.nasa-theme {
 }
 
 .nasa-card {
-    background-color: var(--nasa-card-bg);
-    border: 1px solid var(--nasa-border);
+    background-color: var(--p3-card-bg);
+    border: 1px solid #1C2A44;
     border-radius: 8px;
     padding: 20px;
     transition: transform 0.3s, border-color 0.3s;
@@ -198,7 +200,7 @@ body.nasa-theme {
 
 .nasa-card:hover {
     transform: translateY(-5px);
-    border-color: var(--nasa-blue);
+    border-color: var(--p3-cyan);
 }
 
 .nasa-card .img-wrapper {
@@ -207,7 +209,7 @@ body.nasa-theme {
     overflow: hidden;
     border-radius: 6px;
     margin-bottom: 15px;
-    background-color: var(--nasa-dark);
+    background-color: var(--p3-dark);
 }
 
 .nasa-card .img-wrapper img {
@@ -227,7 +229,7 @@ body.nasa-theme {
 }
 
 .nasa-card p {
-    color: var(--nasa-muted);
+    color: var(--p3-muted);
     font-size: 0.9rem;
 }
 
@@ -236,8 +238,8 @@ body.nasa-theme {
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 30px;
-    background-color: var(--nasa-card-bg);
-    border: 1px solid var(--nasa-border);
+    background-color: var(--p3-card-bg);
+    border: 1px solid #1C2A44;
     border-radius: 8px;
     padding: 35px;
 }
@@ -249,21 +251,21 @@ body.nasa-theme {
 
 .profile-info .sub-title {
     display: inline-block;
-    color: var(--nasa-red);
+    color: var(--p3-cyan);
     font-weight: 600;
     margin-bottom: 20px;
 }
 
 .profile-info p {
-    color: var(--nasa-muted);
+    color: var(--p3-muted);
     margin-bottom: 15px;
 }
 
 .skills-box {
-    background-color: var(--nasa-dark);
+    background-color: var(--p3-dark);
     padding: 20px;
     border-radius: 6px;
-    border: 1px solid var(--nasa-border);
+    border: 1px solid var(--p3-cyan);
 }
 
 .skills-box h3 {
@@ -271,7 +273,7 @@ body.nasa-theme {
     letter-spacing: 1px;
     color: #fff;
     margin-bottom: 20px;
-    border-bottom: 1px solid var(--nasa-border);
+    border-bottom: 1px solid var(--p3-blue);
     padding-bottom: 8px;
 }
 
@@ -282,35 +284,35 @@ body.nasa-theme {
 .skills-box li {
     display: flex;
     justify-content: space-between;
-    color: var(--nasa-muted);
+    color: var(--p3-muted);
     margin-bottom: 15px;
     font-size: 0.9rem;
 }
 
 .skills-box li span {
-    color: var(--nasa-blue);
+    color: var(--p3-cyan);
     font-weight: bold;
 }
 
-/*BROSUR & KONTAK NASA STYLE*/
+/*BROSUR & KONTAK STYLE*/
 .nasa-brochure-box {
     display: grid;
     grid-template-columns: 1fr 300px 1fr;
     gap: 25px;
-    background-color: var(--nasa-card-bg);
-    border: 1px solid var(--nasa-border);
+    background-color: var(--p3-card-bg);
+    border: 1px solid #1C2A44;
     padding: 30px;
     border-radius: 8px;
 }
 
 .nasa-brochure-col h4 {
-    color: var(--nasa-red);
+    color: var(--p3-cyan);
     font-size: 1.1rem;
     margin-bottom: 10px;
 }
 
 .nasa-brochure-col p {
-    color: var(--nasa-muted);
+    color: var(--p3-muted);
     font-size: 0.9rem;
     line-height: 1.7;
 }
@@ -318,7 +320,7 @@ body.nasa-theme {
 .nasa-brochure-img img {
     width: 100%;
     border-radius: 6px;
-    border: 1px solid var(--nasa-border);
+    border: 1px solid var(--p3-cyan);
 }
 
 .social-links-wrapper {
@@ -330,8 +332,8 @@ body.nasa-theme {
 
 .social-btn {
     display: inline-block;
-    background-color: var(--nasa-card-bg);
-    border: 1px solid var(--nasa-blue);
+    background-color: var(--p3-card-bg);
+    border: 1px solid var(--p3-cyan);
     color: #fff;
     padding: 12px 28px;
     border-radius: 4px;
@@ -341,15 +343,16 @@ body.nasa-theme {
 }
 
 .social-btn:hover {
-    background-color: var(--nasa-blue);
-    box-shadow: 0 0 15px rgba(11, 61, 145, 0.6);
+    background-color: var(--p3-cyan);
+    color: var(--p3-dark);
+    box-shadow: 0 0 15px rgba(0, 168, 232, 0.6);
 }
 
 /*BAWAH*/
 .nasa-footer {
     text-align: center;
     padding: 30px 20px;
-    border-top: 1px solid var(--nasa-border);
+    border-top: 1px solid #1C2A44;
     margin-top: 80px;
     color: #64748b;
     font-size: 0.85rem;
